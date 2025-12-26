@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Churn Prediction</title>
+</head>
+<body>
+
+<h2>Customer Churn Prediction</h2>
+
+<form action="/predict" method="post">
+
+    Age: <input type="number" name="Age"><br><br>
+    Gender: <input type="text" name="Gender"><br><br>
+    Tenure: <input type="number" name="Tenure"><br><br>
+    Usage Frequency: <input type="number" name="Usage Frequency"><br><br>
+    Support Calls: <input type="number" name="Support Calls"><br><br>
+    Payment Delay: <input type="number" name="Payment Delay"><br><br>
+    Subscription Type: <input type="text" name="Subscription Type"><br><br>
+    Contract Length: <input type="text" name="Contract Length"><br><br>
+    Total Spend: <input type="number" name="Total Spend"><br><br>
+    Last Interaction: <input type="number" name="Last Interaction"><br><br>
+
+    <input type="submit" value="Predict">
+
+</form>
+
+{% if prediction %}
+    <h3>Prediction: {{ prediction }}</h3>
+{% endif %}
+
+</body>
+</html>
